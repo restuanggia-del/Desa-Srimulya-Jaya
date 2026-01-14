@@ -1,5 +1,6 @@
 ---
-
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <html lang="id">
@@ -7,17 +8,28 @@
     <meta charset="UTF-8" />
     <title>Desa Sri Mulya Jaya</title>
   </head>
-  <body class="bg-slate-100 p-8">
-    <h1 class="text-4xl font-bold text-green-700">
-      Website Resmi Desa Sri Mulya Jaya
-    </h1>
 
-    <p class="mt-4 text-lg text-slate-700">
-      Informasi resmi kegiatan dan profil desa.
-    </p>
+  <body class="bg-slate-50">
+    <Navbar />
 
-    <div class="mt-6 rounded-xl bg-white p-6 shadow">
-      <p class="text-slate-600">Tailwind CSS sudah aktif.</p>
-    </div>
+    <main class="p-8">
+      <h1 class="text-4xl font-bold text-blue-600">
+        Website Resmi Desa Sri Mulya Jaya
+      </h1>
+
+      <p class="mt-4 text-lg text-slate-800">
+        Informasi resmi kegiatan dan profil desa.
+      </p>
+
+      <div class="mt-6 rounded-xl bg-white p-6 shadow">
+        <p class="text-slate-600">Tailwind CSS sudah aktif.</p>
+      </div>
+
+      <button
+        class="mt-6 cursor-pointer rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700"
+      >
+        Selengkapnya
+      </button>
+    </main>
   </body>
 </html>
