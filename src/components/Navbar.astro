@@ -1,5 +1,6 @@
 ---
 const menuId = "mobile-menu";
+const currentPath = Astro.url.pathname;
 ---
 
 <nav class="sticky top-0 z-50 border-b border-slate-200 bg-white backdrop-blur">
@@ -19,14 +20,26 @@ const menuId = "mobile-menu";
 
       <!-- Desktop Menu -->
       <div class="hidden items-center gap-6 md:flex">
-        <a href="/" class="font-medium text-slate-700 hover:text-blue-600"
-          >Beranda</a
+        <a
+          href="/"
+          class={`font-medium ${
+            currentPath === "/"
+              ? "text-blue-600"
+              : "text-slate-700 hover:text-blue-600"
+          }`}
         >
+          Beranda
+        </a>
 
         <!-- Dropdown Profil Desa -->
         <div class="relative group">
-          <button
-            class="flex items-center gap-1 font-medium text-slate-700 hover:text-blue-600"
+          <a
+            href="/profil"
+            class={`font-medium ${
+              currentPath.startsWith("/profil")
+                ? "text-blue-600"
+                : "text-slate-700 hover:text-blue-600"
+            }`}
           >
             Profil Desa
             <svg
@@ -41,8 +54,7 @@ const menuId = "mobile-menu";
                 stroke-width="2"
                 d="M19 9l-7 7-7-7"></path>
             </svg>
-          </button>
-
+          </a>
           <div
             class="absolute left-0 top-full mt-2 hidden w-56 rounded-xl border border-slate-200 bg-white shadow-sm group-hover:block"
           >
@@ -65,18 +77,36 @@ const menuId = "mobile-menu";
 
         <a
           href="/pemerintahan"
-          class="font-medium text-slate-700 hover:text-blue-600">Pemerintahan</a
+          class={`font-medium ${
+            currentPath.startsWith("/pemerintahan")
+              ? "text-blue-600"
+              : "text-slate-700 hover:text-blue-600"
+          }`}>Pemerintahan</a
         >
-        <a href="/berita" class="font-medium text-slate-700 hover:text-blue-600"
-          >Berita</a
+        <a
+          href="/berita"
+          class={`font-medium ${
+            currentPath.startsWith("/berita")
+              ? "text-blue-600"
+              : "text-slate-700 hover:text-blue-600"
+          }`}>Berita</a
         >
-        <a href="/galeri" class="font-medium text-slate-700 hover:text-blue-600"
-          >Galeri</a
+        <a
+          href="/galeri"
+          class={`font-medium ${
+            currentPath.startsWith("/galeri")
+              ? "text-blue-600"
+              : "text-slate-700 hover:text-blue-600"
+          }`}>Galeri</a
         >
 
         <a
           href="/kontak"
-          class="rounded-lg bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700"
+          class={`font-medium ${
+            currentPath.startsWith("/kontak")
+              ? "text-blue-600"
+              : "text-slate-700 hover:text-blue-600"
+          }`}
         >
           Kontak
         </a>
