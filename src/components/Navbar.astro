@@ -1,12 +1,16 @@
 ---
 const menuId = "mobile-menu";
 const currentPath = Astro.url.pathname;
+
+const isActive = (path) => {
+  if (path === "/") return currentPath === "/";
+  return currentPath.startsWith(path);
+};
 ---
 
 <nav class="sticky top-0 z-50 border-b border-slate-200 bg-white backdrop-blur">
   <div class="mx-auto max-w-7xl px-6">
     <div class="flex h-16 items-center justify-between">
-      <!-- Logo -->
       <div class="flex items-center gap-3">
         <!-- <img
           src="/logo-desa.png"
@@ -17,8 +21,6 @@ const currentPath = Astro.url.pathname;
           Desa Sri Mulya Jaya
         </span>
       </div>
-
-      <!-- Desktop Menu -->
       <div class="hidden items-center gap-6 md:flex">
         <a
           href="/"
@@ -30,19 +32,17 @@ const currentPath = Astro.url.pathname;
         >
           Beranda
         </a>
-
-        <!-- Dropdown Profil Desa -->
         <div class="relative group">
           <a
             href="/profil"
-            class={`font-medium ${
+            class={`flex items-center gap-1 font-medium ${
               currentPath.startsWith("/profil")
                 ? "text-blue-600"
                 : "text-slate-700 hover:text-blue-600"
             }`}
           >
             Profil Desa
-            <svg
+            <!-- <svg
               class="h-4 w-4 transition group-hover:rotate-180"
               fill="none"
               stroke="currentColor"
@@ -53,9 +53,9 @@ const currentPath = Astro.url.pathname;
                 stroke-linejoin="round"
                 stroke-width="2"
                 d="M19 9l-7 7-7-7"></path>
-            </svg>
+            </svg> -->
           </a>
-          <div
+          <!-- <div
             class="absolute left-0 top-full mt-2 hidden w-56 rounded-xl border border-slate-200 bg-white shadow-sm group-hover:block"
           >
             <a href="/sejarah" class="block px-4 py-2 hover:bg-slate-100"
@@ -72,7 +72,7 @@ const currentPath = Astro.url.pathname;
               href="/sambutan-kepala-desa"
               class="block px-4 py-2 hover:bg-slate-100">Sambutan Kepala Desa</a
             >
-          </div>
+          </div> -->
         </div>
 
         <a
@@ -99,15 +99,28 @@ const currentPath = Astro.url.pathname;
               : "text-slate-700 hover:text-blue-600"
           }`}>Galeri</a
         >
-
         <a
           href="/kontak"
-          class={`font-medium ${
+          class={`flex items-center gap-2 rounded-lg px-4 py-2 font-medium transition ${
             currentPath.startsWith("/kontak")
-              ? "text-blue-600"
-              : "text-slate-700 hover:text-blue-600"
+              ? "bg-blue-600 text-white"
+              : "bg-blue-600 text-white hover:bg-blue-700"
           }`}
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.49a1 1 0 01-.5 1.21l-2.26 1.13a11.04 11.04 0 005.52 5.52l1.13-2.26a1 1 0 011.21-.5l4.49 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.82 21 3 14.18 3 6V5z"
+            ></path>
+          </svg>
           Kontak
         </a>
       </div>
@@ -134,36 +147,62 @@ const currentPath = Astro.url.pathname;
       </button>
     </div>
   </div>
-
   <!-- Mobile Menu -->
   <div id={menuId} class="hidden border-t border-slate-200 bg-white md:hidden">
     <div class="space-y-1 px-6 py-4">
-      <a href="/" class="block rounded px-3 py-2 hover:bg-slate-100">Beranda</a>
-      <a href="/sejarah" class="block rounded px-3 py-2 hover:bg-slate-100"
-        >Sejarah Desa</a
-      >
-      <a href="/visi-misi" class="block rounded px-3 py-2 hover:bg-slate-100"
-        >Visi dan Misi</a
-      >
       <a
-        href="/struktur-organisasi"
-        class="block rounded px-3 py-2 hover:bg-slate-100"
-        >Struktur Organisasi</a
+        href="/"
+        class={`block rounded px-3 py-2 font-medium ${
+          isActive("/")
+            ? "bg-blue-50 text-blue-600"
+            : "text-slate-700 hover:bg-slate-100"
+        }`}
       >
+        Beranda
+      </a>
       <a
-        href="/sambutan-kepala-desa"
-        class="block rounded px-3 py-2 hover:bg-slate-100"
-        >Sambutan Kepala Desa</a
+        href="/profil"
+        class={`block rounded px-3 py-2 font-medium ${
+          isActive("/profil")
+            ? "bg-blue-50 text-blue-600"
+            : "text-slate-700 hover:bg-slate-100"
+        }`}
       >
-      <a href="/pemerintahan" class="block rounded px-3 py-2 hover:bg-slate-100"
-        >Pemerintahan</a
+        Profil Desa
+      </a>
+      <a
+        href="/pemerintahan"
+        class={`block rounded px-3 py-2 font-medium ${
+          isActive("/pemerintahan")
+            ? "bg-blue-50 text-blue-600"
+            : "text-slate-700 hover:bg-slate-100"
+        }`}
       >
-      <a href="/berita" class="block rounded px-3 py-2 hover:bg-slate-100"
-        >Berita</a
+        Pemerintahan
+      </a>
+
+      <a
+        href="/berita"
+        class={`block rounded px-3 py-2 font-medium ${
+          isActive("/berita")
+            ? "bg-blue-50 text-blue-600"
+            : "text-slate-700 hover:bg-slate-100"
+        }`}
       >
-      <a href="/galeri" class="block rounded px-3 py-2 hover:bg-slate-100"
-        >Galeri</a
+        Berita
+      </a>
+
+      <a
+        href="/galeri"
+        class={`block rounded px-3 py-2 font-medium ${
+          isActive("/galeri")
+            ? "bg-blue-50 text-blue-600"
+            : "text-slate-700 hover:bg-slate-100"
+        }`}
       >
+        Galeri
+      </a>
+
       <a
         href="/kontak"
         class="block rounded bg-blue-600 px-3 py-2 text-white hover:bg-blue-700"
