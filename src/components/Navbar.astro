@@ -1,11 +1,11 @@
 ---
-
+const menuId = "mobile-menu";
 ---
 
-<nav class="sticky top-0 z-50 border-b border-slate-200 bg-white">
+<nav class="sticky top-0 z-50 border-b border-slate-200 bg-white backdrop-blur">
   <div class="mx-auto max-w-7xl px-6">
     <div class="flex h-16 items-center justify-between">
-      <!-- Logo & Nama Desa -->
+      <!-- Logo -->
       <div class="flex items-center gap-3">
         <!-- <img
           src="/logo-desa.png"
@@ -17,41 +17,129 @@
         </span>
       </div>
 
-      <!-- Menu Desktop -->
+      <!-- Desktop Menu -->
       <div class="hidden items-center gap-6 md:flex">
-        <a href="/" class="font-medium text-slate-700 hover:text-blue-600">
-          Beranda
-        </a>
-        <a
-          href="/profil"
-          class="font-medium text-slate-700 hover:text-blue-600"
+        <a href="/" class="font-medium text-slate-700 hover:text-blue-600"
+          >Beranda</a
         >
-          Profil Desa
-        </a>
+
+        <!-- Dropdown Profil Desa -->
+        <div class="relative group">
+          <button
+            class="flex items-center gap-1 font-medium text-slate-700 hover:text-blue-600"
+          >
+            Profil Desa
+            <svg
+              class="h-4 w-4 transition group-hover:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <div
+            class="absolute left-0 top-full mt-2 hidden w-56 rounded-xl border border-slate-200 bg-white shadow-sm group-hover:block"
+          >
+            <a href="/sejarah" class="block px-4 py-2 hover:bg-slate-100"
+              >Sejarah Desa</a
+            >
+            <a href="/visi-misi" class="block px-4 py-2 hover:bg-slate-100"
+              >Visi dan Misi</a
+            >
+            <a
+              href="/struktur-organisasi"
+              class="block px-4 py-2 hover:bg-slate-100">Struktur Organisasi</a
+            >
+            <a
+              href="/sambutan-kepala-desa"
+              class="block px-4 py-2 hover:bg-slate-100">Sambutan Kepala Desa</a
+            >
+          </div>
+        </div>
+
         <a
           href="/pemerintahan"
-          class="font-medium text-slate-700 hover:text-blue-600"
+          class="font-medium text-slate-700 hover:text-blue-600">Pemerintahan</a
         >
-          Pemerintahan
-        </a>
-        <a
-          href="/berita"
-          class="font-medium text-slate-700 hover:text-blue-600"
+        <a href="/berita" class="font-medium text-slate-700 hover:text-blue-600"
+          >Berita</a
         >
-          Berita
-        </a>
-        <a
-          href="/galeri"
-          class="font-medium text-slate-700 hover:text-blue-600"
+        <a href="/galeri" class="font-medium text-slate-700 hover:text-blue-600"
+          >Galeri</a
         >
-          Galeri
-        </a>
+
         <a
           href="/kontak"
-          class="rounded-lg bg-blue-600 px-4 py-2 font-medium text-white transition hover:bg-blue-700"
+          class="rounded-lg bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700"
         >
+          Kontak
         </a>
       </div>
+
+      <!-- Hamburger Button -->
+      <button
+        class="md:hidden rounded-md p-2 text-slate-700 hover:bg-slate-100"
+        aria-label="Buka menu"
+        onclick={`document.getElementById('${menuId}').classList.toggle('hidden')`}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id={menuId} class="hidden border-t border-slate-200 bg-white md:hidden">
+    <div class="space-y-1 px-6 py-4">
+      <a href="/" class="block rounded px-3 py-2 hover:bg-slate-100">Beranda</a>
+      <a href="/sejarah" class="block rounded px-3 py-2 hover:bg-slate-100"
+        >Sejarah Desa</a
+      >
+      <a href="/visi-misi" class="block rounded px-3 py-2 hover:bg-slate-100"
+        >Visi dan Misi</a
+      >
+      <a
+        href="/struktur-organisasi"
+        class="block rounded px-3 py-2 hover:bg-slate-100"
+        >Struktur Organisasi</a
+      >
+      <a
+        href="/sambutan-kepala-desa"
+        class="block rounded px-3 py-2 hover:bg-slate-100"
+        >Sambutan Kepala Desa</a
+      >
+      <a href="/pemerintahan" class="block rounded px-3 py-2 hover:bg-slate-100"
+        >Pemerintahan</a
+      >
+      <a href="/berita" class="block rounded px-3 py-2 hover:bg-slate-100"
+        >Berita</a
+      >
+      <a href="/galeri" class="block rounded px-3 py-2 hover:bg-slate-100"
+        >Galeri</a
+      >
+      <a
+        href="/kontak"
+        class="block rounded bg-blue-600 px-3 py-2 text-white hover:bg-blue-700"
+      >
+        Kontak
+      </a>
     </div>
   </div>
 </nav>
