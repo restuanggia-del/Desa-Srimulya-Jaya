@@ -76,12 +76,12 @@ const isActive = (path) => {
         </div>
 
         <a
-          href="/pemerintahan"
+          href="/infografis"
           class={`font-medium ${
-            currentPath.startsWith("/pemerintahan")
+            currentPath.startsWith("/infografis")
               ? "text-blue-600"
               : "text-slate-700 hover:text-blue-600"
-          }`}>Pemerintahan</a
+          }`}>Infografis</a
         >
         <a
           href="/berita"
@@ -171,14 +171,14 @@ const isActive = (path) => {
         Profil Desa
       </a>
       <a
-        href="/pemerintahan"
+        href="/infografis"
         class={`block rounded px-3 py-2 font-medium ${
-          isActive("/pemerintahan")
+          isActive("/infografis")
             ? "bg-blue-50 text-blue-600"
             : "text-slate-700 hover:bg-slate-100"
         }`}
       >
-        Pemerintahan
+        Infografis
       </a>
 
       <a
