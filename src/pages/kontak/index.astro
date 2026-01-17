@@ -3,10 +3,97 @@ import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-  <section>
-    <h1 class="text-3xl font-bold text-slate-800">Kontak Desa</h1>
-    <p class="mt-3 max-w-3xl text-slate-600">
-      Informasi kontak resmi Pemerintah Desa Sri Mulya Jaya.
-    </p>
+  <section class="bg-slate-50 py-16">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-blue-600">KONTAK DESA</h2>
+        <p class="mt-2 text-slate-700">
+          Hubungi Pemerintah Desa Srimulya Jaya untuk informasi, aspirasi, dan
+          pelayanan
+        </p>
+      </div>
+      <div class="mt-14 grid gap-10 lg:grid-cols-2">
+        <div class="space-y-6">
+          <div class="rounded-xl bg-white p-6 shadow-sm">
+            <h3 class="mb-4 text-xl font-bold text-blue-600">
+              Informasi Kontak
+            </h3>
+            <ul class="space-y-4 text-slate-700">
+              <li class="flex gap-3">
+                <span class="font-semibold text-blue-600">📍</span>
+                <span>
+                  Kantor Desa Srimulya Jaya, Kecamatan Seputih Surabaya,
+                  Kabupaten Lampung Tengah
+                </span>
+              </li>
+              <li class="flex gap-3">
+                <span class="font-semibold text-blue-600">📞</span>
+                <span>0821-0000-0000</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="font-semibold text-blue-600">✉️</span>
+                <span>desasrimulyajaya@gmail.com</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="font-semibold text-blue-600">⏰</span>
+                <span>
+                  Senin – Jumat<br />
+                  08.00 – 16.00 WIB
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-xl bg-blue-600 p-6 text-white shadow-sm">
+            <h4 class="font-bold">Catatan</h4>
+            <p class="mt-2 text-sm leading-relaxed">
+              Kami berkomitmen memberikan pelayanan yang terbuka, responsif, dan
+              bertanggung jawab kepada seluruh masyarakat Desa Srimulya Jaya.
+            </p>
+          </div>
+        </div>
+        <div class="rounded-xl bg-white p-8 shadow-sm">
+          <h3 class="mb-6 text-xl font-bold text-blue-600">Kirim Pesan</h3>
+          <form class="space-y-5">
+            <div>
+              <label class="mb-1 block text-sm font-medium text-slate-700">
+                Nama Lengkap
+              </label>
+              <input
+                type="text"
+                class="w-full rounded-lg border border-slate-300 px-4 py-2 focus:border-blue-500 focus:outline-none"
+                placeholder="Masukkan nama Anda"
+              />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-medium text-slate-700">
+                Email
+              </label>
+              <input
+                type="email"
+                class="w-full rounded-lg border border-slate-300 px-4 py-2 focus:border-blue-500 focus:outline-none"
+                placeholder="Masukkan email aktif"
+              />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-medium text-slate-700">
+                Pesan
+              </label>
+              <textarea
+                rows="4"
+                class="w-full rounded-lg border border-slate-300 px-4 py-2 focus:border-blue-500 focus:outline-none"
+                placeholder="Tuliskan pesan atau aspirasi Anda"></textarea>
+            </div>
+            <div class="flex justify-end">
+              <button
+                type="submit"
+                class="rounded-lg bg-blue-600 px-6 py-2 font-medium text-white transition hover:bg-blue-700"
+              >
+                Kirim Pesan
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 </MainLayout>
