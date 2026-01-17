@@ -60,7 +60,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       </div>
     </div>
   </section>
-  <section class="bg-slate-50 py-16">
+  <section id="stok" class="bg-slate-50 py-16 mt-20">
     <div class="text-center">
       <h2 class="text-3xl font-bold text-blue-600">STOK</h2>
       <p class="mt-2 text-slate-700">
@@ -123,7 +123,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
     <div class="mt-10 flex justify-end">
       <a
-        href="/profil"
+        href="/profil#stok"
         class="rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700"
       >
         Lihat Selengkapnya
@@ -156,7 +156,6 @@ import MainLayout from "../layouts/MainLayout.astro";
   </section>
   <section class="bg-slate-50 py-16">
     <div class="mx-auto max-w-6xl px-6">
-      <!-- Judul -->
       <div class="text-center">
         <h2 class="text-3xl font-bold text-blue-600">BERITA DESA</h2>
         <p class="mt-2 text-slate-700">
@@ -164,9 +163,7 @@ import MainLayout from "../layouts/MainLayout.astro";
           Srimulya Jaya
         </p>
       </div>
-      <!-- Grid Berita -->
       <div class="mt-10 grid gap-8 md:grid-cols-3">
-        <!-- Card -->
         <div class="overflow-hidden rounded-xl bg-white shadow-sm">
           <div class="relative aspect-[4/3]">
             <img
@@ -174,7 +171,6 @@ import MainLayout from "../layouts/MainLayout.astro";
               alt="Penyuluhan Untuk Petani Desa Srimulya Jaya"
               class="h-full w-full object-cover"
             />
-            <!-- Badge -->
             <span
               class="absolute left-3 top-3 rounded bg-blue-600 px-3 py-1 text-xs font-medium text-white"
             >
@@ -200,7 +196,6 @@ import MainLayout from "../layouts/MainLayout.astro";
             </a>
           </div>
         </div>
-        <!-- Card -->
         <div class="overflow-hidden rounded-xl bg-white shadow-sm">
           <div class="relative aspect-[4/3]">
             <img
@@ -231,7 +226,6 @@ import MainLayout from "../layouts/MainLayout.astro";
             </a>
           </div>
         </div>
-        <!-- Card -->
         <div class="overflow-hidden rounded-xl bg-white shadow-sm">
           <div class="relative aspect-[4/3]">
             <img
@@ -264,10 +258,17 @@ import MainLayout from "../layouts/MainLayout.astro";
         </div>
       </div>
     </div>
+    <div class="mt-10 flex justify-end">
+      <a
+        href="/berita"
+        class="rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700"
+      >
+        Lihat Selengkapnya
+      </a>
+    </div>
   </section>
   <section class="bg-white py-16">
     <div class="mx-auto max-w-6xl px-6">
-      <!-- Judul -->
       <div class="text-center">
         <h2 class="text-3xl font-bold text-blue-600">INFOGRAFIS PENDUDUK</h2>
         <p class="mt-2 text-slate-700">
@@ -276,9 +277,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         </p>
       </div>
       <div class="mt-12 grid gap-10 lg:grid-cols-2">
-        <!-- Statistik Penduduk -->
         <div class="space-y-5">
-          <!-- Jumlah Penduduk -->
           <div
             class="flex items-center gap-5 rounded-xl bg-slate-50 p-5 shadow-sm"
           >
@@ -292,7 +291,6 @@ import MainLayout from "../layouts/MainLayout.astro";
               <p class="text-sm text-slate-600">Jumlah Penduduk</p>
             </div>
           </div>
-          <!-- Laki-laki -->
           <div
             class="flex items-center gap-5 rounded-xl bg-slate-50 p-5 shadow-sm"
           >
@@ -306,7 +304,6 @@ import MainLayout from "../layouts/MainLayout.astro";
               <p class="text-sm text-slate-600">Jumlah Penduduk Laki-laki</p>
             </div>
           </div>
-          <!-- Perempuan -->
           <div
             class="flex items-center gap-5 rounded-xl bg-slate-50 p-5 shadow-sm"
           >
@@ -320,7 +317,6 @@ import MainLayout from "../layouts/MainLayout.astro";
               <p class="text-sm text-slate-600">Jumlah Penduduk Perempuan</p>
             </div>
           </div>
-          <!-- KK -->
           <div
             class="flex items-center gap-5 rounded-xl bg-slate-50 p-5 shadow-sm"
           >
@@ -335,14 +331,11 @@ import MainLayout from "../layouts/MainLayout.astro";
             </div>
           </div>
         </div>
-        <!-- Perbandingan Penduduk -->
         <div class="flex flex-col items-center justify-center">
           <h3 class="mb-6 text-xl font-bold text-blue-600">
             Perbandingan Penduduk
           </h3>
-          <!-- Pie Chart (SVG) -->
           <svg width="220" height="220" viewBox="0 0 220 220">
-            <!-- Perempuan -->
             <circle
               r="90"
               cx="110"
@@ -352,7 +345,6 @@ import MainLayout from "../layouts/MainLayout.astro";
               stroke-width="40"
               stroke-dasharray="282 565"
               transform="rotate(-90 110 110)"></circle>
-            <!-- Laki-laki -->
             <circle
               r="90"
               cx="110"
@@ -379,7 +371,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </section>
   <section class="bg-white py-16">
-    <!-- Judul -->
     <div class="mx-auto max-w-6xl px-6 text-center">
       <h2 class="text-3xl font-bold text-blue-600">
         POTENSI DESA SRIMULYA JAYA
@@ -388,10 +379,8 @@ import MainLayout from "../layouts/MainLayout.astro";
         Jelajahi berbagai potensi unggulan yang dimiliki Desa Srimulya Jaya
       </p>
     </div>
-    <!-- Slider -->
     <div class="relative mt-10 h-[70vh] w-full overflow-hidden">
       <div class="absolute inset-0 flex animate-slide">
-        <!-- Slide 1 -->
         <div class="relative h-full w-full flex-shrink-0">
           <img
             src="/images/potensi/potensi-1.jpg"
@@ -409,7 +398,6 @@ import MainLayout from "../layouts/MainLayout.astro";
             </div>
           </div>
         </div>
-        <!-- Slide 2 -->
         <div class="relative h-full w-full flex-shrink-0">
           <img
             src="/images/potensi/potensi-2.jpg"
@@ -427,7 +415,6 @@ import MainLayout from "../layouts/MainLayout.astro";
             </div>
           </div>
         </div>
-        <!-- Slide 3 -->
         <div class="relative h-full w-full flex-shrink-0">
           <img
             src="/images/potensi/potensi-3.jpg"
@@ -449,14 +436,12 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </section>
   <section class="bg-slate-50 py-16">
-    <!-- Judul -->
     <div class="mx-auto max-w-6xl px-6 text-center">
       <h2 class="text-3xl font-bold text-blue-600">GALERI</h2>
       <p class="mt-2 text-slate-700">
         Galeri kegiatan perangkat desa dan masyarakat di Desa Srimulya Jaya
       </p>
     </div>
-    <!-- Grid Galeri -->
     <div class="mx-auto mt-10 max-w-6xl px-6">
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         <img

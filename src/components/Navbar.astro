@@ -76,20 +76,20 @@ const isActive = (path) => {
         </div>
 
         <a
+          href="/berita"
+          class={`font-medium ${
+            currentPath.startsWith("/berita")
+              ? "text-blue-600"
+              : "text-slate-700 hover:text-blue-600"
+          }`}>Berita Desa</a
+        >
+        <a
           href="/infografis"
           class={`font-medium ${
             currentPath.startsWith("/infografis")
               ? "text-blue-600"
               : "text-slate-700 hover:text-blue-600"
           }`}>Infografis</a
-        >
-        <a
-          href="/berita"
-          class={`font-medium ${
-            currentPath.startsWith("/berita")
-              ? "text-blue-600"
-              : "text-slate-700 hover:text-blue-600"
-          }`}>Berita</a
         >
         <a
           href="/galeri"

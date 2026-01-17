@@ -69,7 +69,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
   <section class="mt-14">
     <div class="rounded-2xl bg-white p-8 shadow-sm">
-      <h2 class="text-2xl font-bold text-blue-600 text-center mb-6">TUJUAN & VISI</h2>
+      <h2 class="text-2xl font-bold text-blue-600 text-center mb-6">
+        TUJUAN & VISI
+      </h2>
       <div class="space-y-8">
         <div class="flex gap-4">
           <div
@@ -139,6 +141,68 @@ import MainLayout from "../../layouts/MainLayout.astro";
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="mt-24">
+    <div class="text-center">
+      <h3 class="text-2xl font-bold text-blue-600">Struktur Organisasi</h3>
+      <p class="mt-2 text-slate-700">Desa Srimulya Jaya</p>
+    </div>
+    <div class="mt-10 flex justify-center">
+      <img
+        src="/images/struktur/struktur-organisasi.png"
+        alt="Struktur Organisasi Desa Srimulya Jaya"
+        class="max-w-full rounded-xl shadow-md"
+      />
+    </div>
+  </section>
+  <section id="stok" class="mt-20 mb-10">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-blue-600">STOK</h2>
+      <p class="mt-2 text-slate-700">
+        Struktur Organisasi dan Tata Kerja Desa Srimulya Jaya
+      </p>
+    </div>
+    <div class="mt-10 grid gap-6 md:grid-cols-4">
+      <div class="overflow-hidden rounded-xl bg-white shadow-sm">
+        <div class="aspect-[3/4] w-full">
+          <img
+            src="/images/struktur/kades.jpg"
+            alt="Kepala Desa"
+            class="h-full w-full object-cover"
+          />
+        </div>
+        <div class="bg-blue-600 p-4 text-center text-white">
+          <p class="font-semibold">Sartono</p>
+          <p class="text-sm">Kepala Desa</p>
+        </div>
+      </div>
+
+      <!-- Card lainnya -->
+    </div>
+  </section>
+  <section class="bg-white py-16">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-blue-600">PETA DESA</h2>
+        <p class="mt-2 text-slate-700">
+          Menampilkan Peta Desa Dengan Internet Point Desa Srimulya Jaya
+        </p>
+      </div>
+      <div class="relative mt-10 overflow-hidden rounded-xl shadow-sm">
+        <div
+          class="pointer-events-none absolute inset-0 z-10 flex items-center justify-center"
+        >
+          <span class="rounded bg-black/50 px-4 py-2 text-sm text-white">
+            Use Ctrl + Scroll to zoom the map
+          </span>
+        </div>
+        <iframe
+          src="https://www.google.com/maps?q=-5.062483,105.307092&z=15&output=embed"
+          class="h-[450px] w-full border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
