@@ -4,77 +4,66 @@ import MainLayout from "../../layouts/MainLayout.astro";
 
 <MainLayout>
   <section class="mb-12">
-    <h1 class="text-3xl font-bold text-slate-800">
-      Profil Desa Sri Mulya Jaya
+    <h1 class="text-3xl font-bold text-blue-600 text-center">
+      Profil Desa Srimulya Jaya
     </h1>
-    <p class="mt-3 max-w-3xl text-slate-600">
-      Gambaran umum mengenai sejarah, visi, misi, dan kondisi Desa Sri Mulya
-      Jaya sebagai dasar arah pembangunan desa.
-    </p>
   </section>
+  <section class="grid gap-10 md:grid-cols-3">
+    <div class="md:col-span-2">
+      <h2 class="mb-4 text-2xl font-semibold text-blue-600">
+        SEJARAH SINGKAT DESA SRIMULYA JAYA
+      </h2>
+      <div class="space-y-4 leading-relaxed text-slate-700">
+        <p>
+          Kampung Srimulya Jaya berdiri sejak tahun 1971 yang dibuka oleh
+          masyarakat pendatang dari Lampung Tengah, Jawa Tengah, dan sekitarnya.
+          Pembukaan kampung ini dipimpin oleh Ketua Rombong bernama Jumari.
+        </p>
+        <p>
+          Pada awalnya, wilayah ini merupakan pedukuhan dari Desa Mataram Ilir,
+          yaitu Dusun Jontor, yang dipimpin oleh Kepala Dusun Rasiman dan
+          Madmiharjo dengan jumlah penduduk 823 jiwa dari 204 Kepala Keluarga.
+        </p>
+        <p>
+          Srimulya Jaya merupakan salah satu dari 13 kampung di Kecamatan
+          Seputih Surabaya, berjarak sekitar 7 kilometer ke arah timur dari
+          pusat kecamatan. Luas wilayah desa mencapai 1.125 hektar dengan batas
+          wilayah sebagai berikut.
+        </p>
+        <ul class="ml-5 list-disc space-y-1">
+          <li>Utara berbatasan dengan Kampung Way Seputih</li>
+          <li>Selatan berbatasan dengan Kampung Gaya Baru III</li>
+          <li>Timur berbatasan dengan Kampung Kenanga Sari</li>
+          <li>Barat berbatasan dengan Kampung Mataram Ilir</li>
+        </ul>
 
-  <!-- Sejarah Desa -->
-  <section class="mb-12">
-    <h2 class="mb-3 text-2xl font-semibold text-slate-800">
-      Sejarah Singkat Desa
-    </h2>
-    <p class="max-w-4xl leading-relaxed text-slate-600">
-      Desa Sri Mulya Jaya didirikan sebagai hasil pemekaran wilayah dengan
-      tujuan meningkatkan pelayanan pemerintahan dan kesejahteraan masyarakat.
-      Sejak awal berdirinya, desa ini berkembang melalui sektor pertanian,
-      perkebunan, serta partisipasi aktif masyarakat dalam pembangunan desa.
-    </p>
-  </section>
+        <p>
+          Berdasarkan Surat Keputusan Gubernur Kepala Daerah Tingkat I Lampung
+          tanggal 1 Maret 1986 Nomor G/059/B.III/HK/1986, dibentuk Desa
+          Persiapan Srimulya Jaya yang dipimpin oleh Jasman dengan luas wilayah
+          1.150 hektar dan jumlah penduduk 1.100 jiwa.
+        </p>
 
-  <!-- Visi -->
-  <section class="mb-8">
-    <h2 class="mb-3 text-2xl font-semibold text-slate-800">Visi Desa</h2>
-    <div class="rounded-xl bg-white p-6 shadow-sm">
-      <p class="text-slate-700">
-        Terwujudnya Desa Sri Mulya Jaya yang mandiri, maju, dan sejahtera
-        melalui tata kelola pemerintahan desa yang transparan dan partisipatif.
-      </p>
+        <p>
+          Pada tahun 1990, Desa Persiapan Srimulya Jaya resmi disahkan menjadi
+          Desa Definitif melalui Surat Keputusan Gubernur Lampung tanggal 14
+          November 1990 Nomor G/4403/B.III/HK/1990. Sejak saat itu, Desa
+          Srimulya Jaya berdiri sebagai desa definitif.
+        </p>
+
+        <p>
+          Pemerintahan desa pada masa awal dipimpin oleh Kepala Desa Jasman yang
+          dibantu oleh perangkat desa dan tiga kepala dusun.
+        </p>
+      </div>
     </div>
-  </section>
-
-  <!-- Misi -->
-  <section class="mb-12">
-    <h2 class="mb-3 text-2xl font-semibold text-slate-800">Misi Desa</h2>
-    <div class="rounded-xl bg-white p-6 shadow-sm">
-      <ul class="list-inside list-decimal space-y-2 text-slate-700">
-        <li>Meningkatkan kualitas pelayanan publik desa.</li>
-        <li>Mendorong pembangunan ekonomi berbasis potensi lokal.</li>
-        <li>Mewujudkan pemerintahan desa yang bersih dan akuntabel.</li>
-        <li>Memperkuat peran serta masyarakat dalam pembangunan desa.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Informasi Umum -->
-  <section>
-    <h2 class="mb-4 text-2xl font-semibold text-slate-800">
-      Informasi Umum Desa
-    </h2>
-
-    <div class="grid gap-6 md:grid-cols-2">
-      <div class="rounded-xl bg-white p-6 shadow-sm">
-        <p class="text-slate-600">Nama Desa</p>
-        <p class="font-semibold text-slate-800">Sri Mulya Jaya</p>
-      </div>
-
-      <div class="rounded-xl bg-white p-6 shadow-sm">
-        <p class="text-slate-600">Kecamatan</p>
-        <p class="font-semibold text-slate-800">—</p>
-      </div>
-
-      <div class="rounded-xl bg-white p-6 shadow-sm">
-        <p class="text-slate-600">Kabupaten</p>
-        <p class="font-semibold text-slate-800">—</p>
-      </div>
-
-      <div class="rounded-xl bg-white p-6 shadow-sm">
-        <p class="text-slate-600">Provinsi</p>
-        <p class="font-semibold text-slate-800">—</p>
+    <div class="flex justify-center md:justify-end">
+      <div class="w-48">
+        <img
+          src="/images/logo-desa.png"
+          alt="Logo Desa Srimulya Jaya"
+          class="w-full object-contain"
+        />
       </div>
     </div>
   </section>
