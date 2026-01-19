@@ -8,6 +8,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://restuanggia.github.io",
+  site: "https://restuanggia-del.github.io",
   base: "/Desa-Srimulya-Jaya/",
 });
