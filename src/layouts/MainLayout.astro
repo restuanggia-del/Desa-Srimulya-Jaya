@@ -50,6 +50,33 @@ import "../styles/global.css";
           behavior: "smooth",
         });
       });
+
+      const slider = document.getElementById("slider");
+      const dots = document.querySelectorAll(".dot");
+      let index = 0;
+
+      function showSlide(i) {
+        slider.style.transform = `translateX(-${i * 100}%)`;
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("bg-white", idx === i);
+          dot.classList.toggle("bg-white/50", idx !== i);
+        });
+      }
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          index = i;
+          showSlide(index);
+        });
+      });
+
+      setInterval(() => {
+        index = (index + 1) % dots.length;
+        showSlide(index);
+      }, 5000);
+
+      showSlide(index);
     </script>
   </body>
 </html>

@@ -18,13 +18,17 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <h3 class="mb-4 text-xl font-bold text-blue-600">
               Informasi Kontak
             </h3>
-            <ul class="space-y-4 text-slate-700">
-              <li class="flex gap-3">
-                <span class="font-semibold text-blue-600">📍</span>
-                <span>
+            <ul class="space-y-4 text-slate-700 text-sm">
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 text-blue-600">📍</span>
+                <a
+                  href="https://maps.app.goo.gl/5kzwt82t3Ec6Htdt5"
+                  target="_blank"
+                  class="leading-relaxed hover:text-blue-600"
+                >
                   Kantor Desa Srimulya Jaya, Kecamatan Seputih Surabaya,
                   Kabupaten Lampung Tengah
-                </span>
+                </a>
               </li>
               <li class="flex gap-3">
                 <span class="font-semibold text-blue-600">📞</span>
@@ -32,15 +36,20 @@ import MainLayout from "../../layouts/MainLayout.astro";
               </li>
               <li class="flex gap-3">
                 <span class="font-semibold text-blue-600">📞</span>
-                <span>Sekretaris Desa  : 081368404021 (Suroso)</span>
+                <span>Sekretaris Desa : 081368404021 (Suroso)</span>
               </li>
               <li class="flex gap-3">
                 <span class="font-semibold text-blue-600">📞</span>
-                <span>Operator Desa  : 087818873841 (Ida)</span>
+                <span>Operator Desa : 087818873841 (Ida)</span>
               </li>
               <li class="flex gap-3">
-                <span class="font-semibold text-blue-600">✉️</span>
-                <span>Srimulyajaya83@gmail.com</span>
+                <span class="text-blue-600">✉️</span>
+                <a
+                  href="mailto:Srimulyajaya83@gmail.com"
+                  class="hover:text-blue-600"
+                >
+                  Srimulyajaya83@gmail.com
+                </a>
               </li>
               <li class="flex gap-3">
                 <span class="font-semibold text-blue-600">⏰</span>
