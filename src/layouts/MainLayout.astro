@@ -9,10 +9,6 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
     <title>Desa Srimulya Jaya</title>
   </head>
 
@@ -25,28 +21,15 @@ import "../styles/global.css";
 
     <Footer />
 
-    <!-- Scroll To Top Button -->
     <button
       id="scrollToTop"
-      class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition hover:bg-blue-700 z-50"
+      class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition hover:bg-blue-700 cursor-pointer z-50"
       aria-label="Kembali ke atas"
     >
       ↑
     </button>
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-    <!-- Script Global -->
     <script>
-      // INIT AOS
-      AOS.init({
-        duration: 800,
-        once: true,
-        easing: "ease-out-cubic",
-      });
-
-      // Scroll To Top
       const scrollBtn = document.getElementById("scrollToTop");
 
       window.addEventListener("scroll", () => {
@@ -66,14 +49,11 @@ import "../styles/global.css";
         });
       });
 
-      // Slider
       const slider = document.getElementById("slider");
       const dots = document.querySelectorAll(".dot");
       let index = 0;
 
       function showSlide(i) {
-        if (!slider) return;
-
         slider.style.transform = `translateX(-${i * 100}%)`;
 
         dots.forEach((dot, idx) => {
@@ -89,14 +69,12 @@ import "../styles/global.css";
         });
       });
 
-      if (dots.length > 0) {
-        setInterval(() => {
-          index = (index + 1) % dots.length;
-          showSlide(index);
-        }, 5000);
-
+      setInterval(() => {
+        index = (index + 1) % dots.length;
         showSlide(index);
-      }
+      }, 5000);
+
+      showSlide(index);
     </script>
   </body>
 </html>
